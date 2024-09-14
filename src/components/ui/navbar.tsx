@@ -38,9 +38,12 @@ const Navbar = () => {
         <li className="hover:bg-blue-500 cursor-pointer px-3 py-1 rounded-md">
           Contact
         </li>
-        <li className="hover:bg-blue-500 cursor-pointer px-3 py-1 rounded-md">
+        <Link
+          href={"/landing/pricing"}
+          className="hover:bg-blue-500 cursor-pointer px-3 py-1 rounded-md"
+        >
           Pricing
-        </li>
+        </Link>
         <li className="hover:bg-blue-500 cursor-pointer px-3 py-1 rounded-md">
           Terms of Service
         </li>
