@@ -47,7 +47,7 @@ export async function apiCall(
   try {
     const request: AxiosRequestConfig = {
       method: method,
-      url: process.env.API_URL + finalEndpoint,
+      url: process.env.NEXT_PUBLIC_API_URL + finalEndpoint,
       headers: {
         Accept: "application/json",
         "content-type": "application/json",
