@@ -14,7 +14,7 @@ const Pricing = (props: Props) => {
   };
 
   return (
-    <div className=" bg-gradient-to-r text-white from-black via-gray-800 to-black ">
+    <div className="p-5 bg-gradient-to-r text-white from-black via-gray-800 to-black ">
       {" "}
       <main className="p-4 container">
         <section className=" container rounded-lg p-4">
