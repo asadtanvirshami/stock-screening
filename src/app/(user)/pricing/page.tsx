@@ -80,7 +80,7 @@ const Pricing = (props: Props) => {
             Not ready to take a trial? Get free insights to your inbox
           </h3>
           <p className="text-gray-500">
-            Discover the best from Stockopedia's expert team of analysts as we
+            {"Discover the best from Stockopedia's expert team of analysts as we"}
             share investment research, stock market commentary, and
             data-informed insights-direct to your inbox.
           </p>
@@ -99,106 +99,18 @@ const Pricing = (props: Props) => {
               Key points about your 14 day trial
             </h3>
             <ul className="list-disc pl-4">
-              <li>You won't be charged for the trial</li>
+              <li>{"You won't be charged for the trial"}</li>
               <li>You can cancel anytime</li>
-              <li>You'll need a payment card</li>
+              <li>{"You'll need a payment card"}</li>
             </ul>
             <p className="text-white mt-2">
               To verify your account, we just need a payment card to start your
-              free trial. Don't worry, your card won't be charged.
+              free trial. {"Don't worry, your card won't be charged"}.
             </p>
           </div>
         </section>
         {/* course event section  */}
-        <section className="bg-gray-100 p-4">
-          <h2 className="text-2xl font-bold mb-4">Included in all plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">StockReports™</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  With everything from director deals to dividends, the Stock
-                  Reports unlock fast, confident investment decisions on any
-                  stock.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">StockRanks™</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Unique to Stockopedia, the StockRanks show you the highest
-                  quality, best value, and strongest momentum stocks.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">Stock screener</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Create screens with 350+ financial ratios or explore our 65
-                  GuruScreens to kick-start the search for your next investment.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">Analysis & education</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Daily market analysis and ongoing investment education.
-                  Develop a more informed approach to investing.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">Investor community</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Discuss stocks with one of the brightest private investor
-                  communities on the planet.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">Folios</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  In-depth analysis and performance monitoring, helping you
-                  build wealth and manage your risk with confidence.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">
-                Charts & technical analysis
-              </h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Time your entry and exit, with fully customizable charts,
-                  overlays, and trend indicators on stocks and indices.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">Alerts</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Set unlimited alerts on price, fundamentals, and more to stay
-                  up-to-date with the stocks on your radar.
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <h3 className="text-xl font-bold mb-2">Online support</h3>
-              <ul className="list-disc pl-4">
-                <li>
-                  Get online chat support throughout the UK trading day from our
-                  team of dedicated support staff.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        
       </main>
     </div>
   );
