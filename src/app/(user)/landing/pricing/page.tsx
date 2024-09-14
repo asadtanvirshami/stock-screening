@@ -1,6 +1,8 @@
 "use client";
+import { ArrowBigUpIcon, BarChart3, ChartArea, Dock, GraduationCap, ScreenShare, Users } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import FAQSection from "../home/faqs";
 
 type Props = {};
 
@@ -12,7 +14,7 @@ const Pricing = (props: Props) => {
   };
 
   return (
-    <div className=" bg-gradient-to-r text-white from-black via-gray-800 to-black h-screen">
+    <div className=" bg-gradient-to-r text-white from-black via-gray-800 to-black ">
       {" "}
       <main className="p-4 container">
         <section className=" container rounded-lg p-4">
@@ -80,7 +82,9 @@ const Pricing = (props: Props) => {
             Not ready to take a trial? Get free insights to your inbox
           </h3>
           <p className="text-gray-500">
-            {"Discover the best from Stockopedia's expert team of analysts as we"}
+            {
+              "Discover the best from Stockopedia's expert team of analysts as we"
+            }
             share investment research, stock market commentary, and
             data-informed insights-direct to your inbox.
           </p>
@@ -110,11 +114,102 @@ const Pricing = (props: Props) => {
           </div>
         </section>
         {/* course event section  */}
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-4  rounded-lg p-4 mt-4">
           <div className="border border-white p-4 mt-5 rounded-lg">
-            
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <Dock className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">StockReports™</h1>
+                <article>
+                  {" "}
+                  With everything from director deals to dividends, the
+                  StockReports unlock fast, confident investment decisions on
+                  any stock.
+                </article>
+              </div>
+            </div>
+          </div>
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <ArrowBigUpIcon className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">StockRanks™</h1>
+                <article>
+                  {" "}
+                  Unique to Stockopedia, the StockRanks show you the highest
+                  quality, best value, and strongest momentum stocks.
+                </article>
+              </div>
+            </div>
+          </div>
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <ScreenShare className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">Stock screener</h1>
+                <article>
+                  {" "}
+                  Create screens with 350+ financial ratios or explore our 65
+                  GuruScreens to kick-start the search for your next investment.
+                </article>
+              </div>
+            </div>
+          </div>
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <GraduationCap className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">Analysis & education</h1>
+                <article>
+                  {" "}
+                  Create screens with 350+ financial ratios or explore our 65
+                  GuruScreens to kick-start the search for your next investment.
+                </article>
+              </div>
+            </div>
+          </div>
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <BarChart3 className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">Stock screener</h1>
+                <article>
+                  {" "}
+                  Daily market analysis and ongoing investment education.
+                  Develop a more informed approach to investing.
+                </article>
+              </div>
+            </div>
+          </div>
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <Users className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">Investor community</h1>
+                <article>
+                  {" "}
+                  Discuss stocks with one of the brightest private investor
+                  communities on the planet.
+                </article>
+              </div>
+            </div>
+          </div>
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            <div className="flex flex-row space-x-5 justify-evenly align-middle items-center">
+              <ChartArea className="w-28 h-28" />
+              <div className="flex flex-col">
+                <h1 className="">Charts & technical analysis</h1>
+                <article>
+                  {" "}
+                  Time your entry and exit, with fully customisable charts,
+                  overlays and trend indicators on stocks and indices.
+                </article>
+              </div>
+            </div>
           </div>
         </div>
+
+        <FAQSection/>
       </main>
     </div>
   );
