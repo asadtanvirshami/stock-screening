@@ -110,7 +110,11 @@ const Pricing = (props: Props) => {
           </div>
         </section>
         {/* course event section  */}
-        
+        <div className="grid grid-cols-3">
+          <div className="border border-white p-4 mt-5 rounded-lg">
+            
+          </div>
+        </div>
       </main>
     </div>
   );

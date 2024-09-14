@@ -35,7 +35,7 @@ import { JwtPayload } from "jsonwebtoken";
 import { useUser } from "@/atoms/userAtom/hooks";
 
 type Props = {
-  setIsSignUp: (active: boolean) => void;
+
 };
 
 export interface CustomJwtPayload extends JwtPayload {
