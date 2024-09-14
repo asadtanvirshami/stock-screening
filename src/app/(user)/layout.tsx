@@ -5,6 +5,7 @@ import Navbar from "@/components/ui/navbar";
 import { Toaster } from "@/components/ui/toaster";
 import { usePathname } from "next/navigation";
 import React, { ReactNode } from "react";
+import { Provider as JotaiProvider } from "jotai";
 
 type Props = {
   children: ReactNode;
@@ -21,37 +22,39 @@ const Layout = ({ children }: Props) => {
   // Render based on pathname
   return (
     <>
-      {isAuthPage && (
-        <>
-          {children}
-          <Toaster />
-        </>
-      )}
+      <JotaiProvider>
+        {isAuthPage && (
+          <>
+            {children}
+            <Toaster />
+          </>
+        )}
 
-      {isLandingPage && (
-        <>
-          <Navbar />
-          {children}
-          <Toaster />
-          <Footer />
-        </>
-      )}
+        {isLandingPage && (
+          <>
+            <Navbar />
+            {children}
+            <Toaster />
+            <Footer />
+          </>
+        )}
 
-      {isDashboardPage && (
-        <>
-          {children}
-          <Toaster />
-        </>
-      )}
+        {isDashboardPage && (
+          <>
+            {children}
+            <Toaster />
+          </>
+        )}
 
-      {!isAuthPage && !isLandingPage && !isDashboardPage && (
-        <>
-          <Navbar />
-          {children}
-          <Toaster />
-          <Footer />
-        </>
-      )}
+        {!isAuthPage && !isLandingPage && !isDashboardPage && (
+          <>
+            <Navbar />
+            {children}
+            <Toaster />
+            <Footer />
+          </>
+        )}
+      </JotaiProvider>
     </>
   );
 };

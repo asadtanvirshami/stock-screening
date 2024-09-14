@@ -43,8 +43,7 @@ export async function POST(req: Request, res: NextApiResponse) {
         fname: result.fname,
         lname: result.lname,
         email: result.email,
-        username: result.username,
-        isAuthorized: true,
+        isAuthenticated: true,
       };
 
       console.log(result);

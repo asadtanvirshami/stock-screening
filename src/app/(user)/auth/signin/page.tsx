@@ -32,6 +32,7 @@ import { apiCall } from "@/utils/apiCalls";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "js-cookie";
 import { JwtPayload } from "jsonwebtoken";
+import { useUser } from "@/atoms/userAtom/hooks";
 
 type Props = {
   setIsSignUp: (active: boolean) => void;
@@ -46,6 +47,7 @@ const Signin = (props: Props) => {
   const { toast } = useToast();
   const router = useRouter();
 
+  const { user, saveUser, updateUser, deleteUser } = useUser();
   const [isLoading, setIsLoading] = React.useState(false);
 
   const form = useForm<z.infer<typeof authSchema>>({
@@ -56,21 +58,34 @@ const Signin = (props: Props) => {
     },
   });
 
+  console.log(user);
+
   const handleClickSignin = async (formValues: z.infer<typeof authSchema>) => {
     setIsLoading(true);
     try {
       const response = await apiCall(`${API.API_AUTH_LOGIN}`, "POST", {
         data: { email: formValues.email, password: formValues.password },
       });
-      console.log(response);
 
       if (response?.data) {
-        let jwtToken = jwtDecode(response?.data?.data) as CustomJwtPayload;
-        console.log(jwtToken);
+        let jwtToken = (await jwtDecode(
+          response?.data?.data
+        )) as CustomJwtPayload;
 
-        if (jwtToken?.isAuthorized === true) {
+        if (jwtToken?.isAuthenticated === true) {
           Cookies.set("token", response?.data?.data, { expires: 1 });
           Cookies.set("user", JSON.stringify(jwtToken), { expires: 1 });
+          const userData = {
+            id: jwtToken?.id,
+            fname: jwtToken?.fname,
+            lname: jwtToken?.lname,
+            email: jwtToken?.email,
+            token: response?.data?.data,
+            isBlocked: false,
+            isAuthenticated: jwtToken?.isAuthenticated,
+          };
+          saveUser(userData);
+
           toast({
             title: "Success",
             description: "Signin successful",
