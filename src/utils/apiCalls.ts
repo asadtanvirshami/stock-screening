@@ -47,7 +47,7 @@ export async function apiCall(
   try {
     const request: AxiosRequestConfig = {
       method: method,
-      url: "http://localhost:3000" + finalEndpoint,
+      url: "malaysian-stock.vercel.app" + finalEndpoint,
       headers: {
         Accept: "application/json",
         "content-type": "application/json",
