@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 // Initialize user data from cookies or set default values
 const userDataCache = Cookies.get("user");
 const initialUserData = userDataCache
-  ? JSON.parse(userDataCache)
+  ? JSON.stringify(userDataCache)
   : {
       user: null,
     };
